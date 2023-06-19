@@ -3,6 +3,8 @@ import Home from "./pages/index";
 import { Route, Routes } from "react-router";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import Register from "./pages/Register";
+import Search from "./pages/Search";
 
 import "./App.css";
 
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Login" element={<Login />} />
+        <Route path="Register" element={<Register />} />
+        <Route path="Search" element={<Search />} />
       </Routes>
     </div>
   );
