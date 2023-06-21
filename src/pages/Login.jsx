@@ -63,6 +63,7 @@ export default function Login() {
             name="email"
             autoComplete="email"
             autoFocus
+            className="textfield"
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
@@ -74,6 +75,7 @@ export default function Login() {
             type="password"
             id="password"
             autoComplete="current-password"
+            className="textfield"
             onChange={(e) => setPassword(e.target.value)}
           />
           {/* {validation && <Alert severity="error">{validation.message}</Alert>} */}
@@ -82,12 +84,17 @@ export default function Login() {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
+            style={{ backgroundColor: "#FFA500" }}
           >
             Sign In
           </Button>
         </Box>
         <Typography component="p" variant="p">
-          <Link onClick={linkClick} className="cursor">
+          <Link
+            onClick={linkClick}
+            className="cursor"
+            style={{ Color: "#FFA500" }}
+          >
             Don't have an account yet? Register here!
           </Link>
         </Typography>
