@@ -11,8 +11,13 @@ const Fighter = () => {
   // });
   return (
     <>
-      <div>
-        <h1>User</h1>
+      <div className="user">
+        <h2>Username</h2>
+        <h3>Martial Art</h3>
+        <p>age</p>
+        <p>weight</p>
+        <p>height</p>
+        <p>experience</p>
       </div>
     </>
   );

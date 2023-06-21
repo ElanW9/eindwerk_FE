@@ -1,12 +1,26 @@
 @import url("https://fonts.cdnfonts.com/css/pf-tempesta-five");
 
 body {
-  background-color: rgb(2, 2, 62);
+  background-color: rgb(2, 2, 41);
 }
 h1 {
   font-family: "PF Tempesta Five", sans-serif;
   color: white;
   font-size: 70px;
+}
+
+h2 {
+  font-family: "PF Tempesta Five", sans-serif;
+  color: white;
+}
+
+h3 {
+  font-family: "PF Tempesta Five", sans-serif;
+  color: white;
+}
+
+.user {
+  margin-top: 100px;
 }
 
 p {

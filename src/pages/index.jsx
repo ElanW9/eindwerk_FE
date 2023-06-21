@@ -12,7 +12,7 @@ const Home = () => {
         variant="contained"
         type="large"
         to="/Search"
-        style={{ backgroundColor: "#FFA500" }}
+        style={{ backgroundColor: "#FF7300" }}
       >
         <Link
           to="/Search"

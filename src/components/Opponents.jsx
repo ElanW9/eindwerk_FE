@@ -11,8 +11,13 @@ const Opponents = () => {
   // });
   return (
     <>
-      <div>
-        <h1>test</h1>
+      <div className="user">
+        <h2>Username</h2>
+        <h3>Martial Art</h3>
+        <p>age</p>
+        <p>weight</p>
+        <p>height</p>
+        <p>experience</p>
       </div>
     </>
   );
