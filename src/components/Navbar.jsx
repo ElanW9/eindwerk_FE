@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { Link } from "react-router-dom";
 import LoginBtn from "./LoginBtn";
+import logo from "../assets/logo.png";
 // import AccBtn from "./AccBtn";
 
 const pages = ["Search", "Challenges"];
@@ -49,7 +50,15 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            SparClub
+            <img
+              src={logo}
+              alt="SparClub"
+              style={{
+                marginRight: 2,
+                display: { xs: "none", md: "flex" },
+                width: "200px",
+              }}
+            />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -113,7 +122,15 @@ const Navbar = () => {
               textDecoration: "none",
             }}
           >
-            SparClub
+            <img
+              src={logo}
+              alt="SparClub"
+              style={{
+                marginRight: 2,
+                display: { xs: "none", md: "flex" },
+                width: "200px",
+              }}
+            />
           </Typography>
 
           <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>

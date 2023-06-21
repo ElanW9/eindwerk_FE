@@ -1,15 +1,17 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Opponents from "../components/Opponents";
+import Fighter from "../components/Fighter";
+import vs from "../assets/vs.png";
 
 const Search = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={4} textAlign={"center"}>
-        <h1>Links</h1>
+        <Fighter />
       </Grid>
-      <Grid item xs={4} marginTop={25}>
-        <h2 className="versus">VS</h2>
+      <Grid item xs={4} marginTop={20} textAlign={"center"}>
+        <img src={vs} alt="vs" />
       </Grid>
       <Grid item xs={4} textAlign={"center"}>
         <Opponents />
