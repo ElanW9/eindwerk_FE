@@ -7,7 +7,12 @@ import SendIcon from "@mui/icons-material/Send";
 
 const Info = () => {
   return (
-    <Box sx={{ height: "100%" }} marginTop={"50px"} className="info">
+    <Box
+      sx={{ height: "100%" }}
+      marginTop={"50px"}
+      marginBottom={"0"}
+      className="info"
+    >
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4} textAlign="center">
           <GroupIcon

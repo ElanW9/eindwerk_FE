@@ -1,10 +1,10 @@
 import React from "react";
-
+import { Box } from "@mui/material";
 const Footer = () => {
   return (
-    <footer className="footer">
-      <h2>footer</h2>
-    </footer>
+    <Box className="footer">
+      <p>©2023 Spar Club Elan Wittevrongel</p>
+    </Box>
   );
 };
 
