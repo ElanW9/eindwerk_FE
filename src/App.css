@@ -1,12 +1,30 @@
 @import url("https://fonts.cdnfonts.com/css/pf-tempesta-five");
 
 body {
-  background-color: rgb(2, 2, 62);
+  background-color: rgb(2, 2, 41);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 h1 {
   font-family: "PF Tempesta Five", sans-serif;
   color: white;
   font-size: 70px;
+}
+
+h2 {
+  font-family: "PF Tempesta Five", sans-serif;
+  color: white;
+}
+
+h3 {
+  font-family: "PF Tempesta Five", sans-serif;
+  color: white;
+}
+
+.user {
+  margin-top: 100px;
 }
 
 p {
@@ -28,4 +46,58 @@ p {
   color: white;
   font-size: 50px;
   font-family: "PF Tempesta Five", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
+    width: 100%;
+  }
+}
+
+.info {
+  background-color: #ff7300;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.btnmain:hover {
+  background-color: blue;
+}
+
+.infop {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.footer {
+  background-color: rgb(7, 7, 7);
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.footer p {
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.titleChallenge {
+  margin-left: 40px;
+}
+
+.makeacc {
+  background-color: #2a2a3a;
+}
+
+.makeacctxt h3 {
+  margin-left: 10px;
+}
+
+.makeacctxt p {
+  margin-left: 10px;
+}
+
+.makeaccbtn {
+  margin-left: 10px;
 }

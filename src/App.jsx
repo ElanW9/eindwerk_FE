@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
+import Challenges from "./pages/Challenges";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="Login" element={<Login />} />
         <Route path="Register" element={<Register />} />
         <Route path="Search" element={<Search />} />
+        <Route path="Challenges" element={<Challenges />} />
       </Routes>
     </div>
   );

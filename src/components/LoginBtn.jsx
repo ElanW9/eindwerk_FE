@@ -10,7 +10,7 @@ const LoginBtn = () => {
       <Button
         variant="contained"
         type="large"
-        style={{ backgroundColor: "#FFA500" }}
+        style={{ backgroundColor: "#FF7300" }}
       >
         <Link
           to="/Login"

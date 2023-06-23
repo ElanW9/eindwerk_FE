@@ -67,7 +67,7 @@ export default function Register() {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
-            style={{ backgroundColor: "#FFA500" }}
+            style={{ backgroundColor: "#FF7300" }}
             className="link"
           >
             Register

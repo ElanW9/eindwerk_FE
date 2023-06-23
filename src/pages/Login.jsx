@@ -84,7 +84,7 @@ export default function Login() {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
-            style={{ backgroundColor: "#FFA500" }}
+            style={{ backgroundColor: "#FF7300" }}
           >
             Sign In
           </Button>
@@ -93,7 +93,7 @@ export default function Login() {
           <Link
             onClick={linkClick}
             className="cursor"
-            style={{ Color: "#FFA500" }}
+            style={{ Color: "#FF7300" }}
           >
             Don't have an account yet? Register here!
           </Link>
