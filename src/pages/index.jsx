@@ -1,28 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button, Box } from "@mui/material";
-import logo from "../assets/logo.png";
+import LogoMain from "../components/LogoMain";
+import Info from "../components/Info";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <Box textAlign={"center"} marginTop={10}>
-      <img src={logo} alt="SparClub Logo" />
-      <p>Look for your ideal sparring partner!</p>
-      <Button
-        variant="contained"
-        type="large"
-        to="/Search"
-        style={{ backgroundColor: "#FF7300" }}
-      >
-        <Link
-          to="/Search"
-          className="link"
-          style={{ textDecoration: "none", color: "white" }}
-        >
-          Fight
-        </Link>
-      </Button>
-    </Box>
+    <>
+      <LogoMain />
+      <Info />
+      <Footer />
+    </>
   );
 };
 
