@@ -5,6 +5,7 @@ const Opponents = () => {
   const { get } = useFetch();
   const [fighter, setFighter] = useState(null);
   const [image, setImage] = useState(null);
+  const [martialArt, setMartialArt] = useState(null);
 
   useEffect(() => {
     get("fighters/2").then((fighterData) => {
@@ -14,21 +15,29 @@ const Opponents = () => {
           setImage(imageData);
         });
       }
+      if (fighterData && fighterData.martial_arts_id) {
+        get(`martial_arts/${fighterData.martial_arts_id}`).then(
+          (martialArtData) => {
+            console.log(martialArtData);
+            setMartialArt(martialArtData);
+          }
+        );
+      }
     });
-  }, []); // Provide an empty dependency array here
+  }, []);
 
   return (
     <>
       {fighter && (
         <div className="user" key={fighter.id}>
+          {image && <img src={image.url} alt="Fighter" className="userIMG" />}
           <h2>{fighter.username}</h2>
-          <h3>{fighter.martialArt}</h3>
+          {martialArt && <h3>{martialArt.name}</h3>}
+          {/* Render the martial art if available */}
           <p>Age: {fighter.age}</p>
           <p>Weight: {fighter.weight}</p>
           <p>Height: {fighter.height}</p>
           <p>Experience: {fighter.experience}</p>
-          {image && <img src={image.url} alt="Fighter" />}
-          {/* Render the image if available */}
         </div>
       )}
     </>
