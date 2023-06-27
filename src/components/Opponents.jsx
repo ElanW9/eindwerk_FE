@@ -33,7 +33,7 @@ const Opponents = () => {
           {image && <img src={image.url} alt="Fighter" className="userIMG" />}
           <h2>{fighter.username}</h2>
           {martialArt && <h3>{martialArt.name}</h3>}
-          {/* Render the martial art if available */}
+
           <p>Age: {fighter.age}</p>
           <p>Weight: {fighter.weight}</p>
           <p>Height: {fighter.height}</p>
