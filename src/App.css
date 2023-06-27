@@ -91,13 +91,19 @@ p {
 }
 
 .makeacctxt h3 {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .makeacctxt p {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .makeaccbtn {
-  margin-left: 10px;
+  text-align: center;
+}
+
+.userIMG {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }

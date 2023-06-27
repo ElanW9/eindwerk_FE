@@ -95,7 +95,7 @@ const Navbar = () => {
                     <Link
                       style={{
                         textDecoration: "none",
-                        color: "#d135df",
+                        color: "#ff7300",
                       }}
                       to={`/${page}`}
                     >

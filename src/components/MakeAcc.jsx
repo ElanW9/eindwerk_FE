@@ -16,24 +16,25 @@ const MakeAcc = () => {
             elevate your martial arts level. Start now and make your own Spar
             Club account!
           </p>
-          <Button
-            variant="contained"
-            type="large"
-            to="/Register"
-            style={{
-              backgroundColor: "#FF7300",
-            }}
-            className="makeaccbtn"
-            textAlign={"center"}
-          >
-            <Link
+          <div className="makeaccbtn">
+            <Button
+              variant="contained"
+              type="large"
               to="/Register"
-              className="link"
-              style={{ textDecoration: "none", color: "white" }}
+              style={{
+                backgroundColor: "#FF7300",
+              }}
+              textAlign={"center"}
             >
-              Get started now
-            </Link>
-          </Button>
+              <Link
+                to="/Register"
+                className="link"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Get started now
+              </Link>
+            </Button>
+          </div>
         </Grid>
         <Grid item xs={12} sm={6} textAlign="end">
           <img src={gloves} alt="gloves" id="gloves" />

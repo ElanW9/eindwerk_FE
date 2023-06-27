@@ -1,29 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-// const defaultOptions = {
-//   credentials: "include",
-// };
 const baseUrl = import.meta.env.VITE_SERVER_URL;
 export default function useFetch() {
   const [loading, setLoading] = useState(true);
 
   function myFetch(url) {
-    //, options
-    //add defautl options
-    // if (!options) options = {};
-    // options.credentials = options?.credentials || defaultOptions.credentials;
-    return fetch(baseUrl + url); //,options toevoegen bij authenticatie
+    return fetch(baseUrl + url);
   }
+
+  useEffect(() => {
+    setLoading(false); // Reset loading state when component unmounts
+    return () => {
+      // Cleanup function to cancel any ongoing requests
+      setLoading(true);
+    };
+  }, []);
 
   function get(url) {
     return new Promise((resolve, reject) => {
+      setLoading(true); // Set loading state to true before making the request
       myFetch(url)
         .then((response) => response.json())
         .then((data) => {
-          if (!data) {
-            setLoading(false);
-            return reject(data);
-          }
           setLoading(false);
           resolve(data);
         })
@@ -36,6 +34,7 @@ export default function useFetch() {
 
   function post(url, body) {
     return new Promise((resolve, reject) => {
+      setLoading(true);
       myFetch(url, {
         method: "post",
         headers: {
@@ -44,10 +43,6 @@ export default function useFetch() {
         body: JSON.stringify(body),
       })
         .then((response) => {
-          if (!response || (response.status >= 400 && response.status <= 500)) {
-            setLoading(false);
-            return reject(response);
-          }
           setLoading(false);
           resolve(response);
         })
@@ -57,5 +52,6 @@ export default function useFetch() {
         });
     });
   }
+
   return { get, post, loading };
 }
