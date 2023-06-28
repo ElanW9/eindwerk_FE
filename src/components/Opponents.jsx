@@ -5,7 +5,7 @@ const Opponents = () => {
   const { get } = useFetch();
   const [fighter, setFighter] = useState(null);
   const [image, setImage] = useState(null);
-  const [martialArt, setMartialArt] = useState(null);
+  const [martialArt, setMartialArt] = useState([]);
 
   useEffect(() => {
     const getRandomId = (min, max) => {
