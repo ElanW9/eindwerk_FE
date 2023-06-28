@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer, useContext } from "react";
+import { useState, useContext } from "react";
 import { Navigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -7,32 +7,32 @@ import { Alert } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
-// import useFetch from "../components/UseFetch";
-// import { Auth } from "../components/Auth";
+import useFetch from "../components/UseFetch";
+import { Auth } from "../components/Auth";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //   const [validation, setValidation] = useState(undefined);
-  //   const [login, setLogin] = useContext(Auth);
+  const [validation, setValidation] = useState(undefined);
+  // const [login, setLogin] = useContext(Auth);
   const navigate = useNavigate();
 
-  //   const { post } = useFetch();
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     post("auth/login", { email: email, password: password })
-  //       .then((response) => {
-  //         console.log(response);
-  //         if (response.status === 200) {
-  //           setLogin({ loggedin: true });
-  //         }
-  //       })
-  //       .catch((error) => {
-  //         console.log("error", error);
-  //         error.json().then((data) => setValidation(data));
-  //       });
-  //   };
+  const { post } = useFetch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    post("login", { email: email, password: password })
+      .then((response) => {
+        console.log(response);
+        if (response.status === 200) {
+          setLogin({ loggedin: true });
+        }
+      })
+      .catch((error) => {
+        console.log("error", error);
+        error.json().then((data) => setValidation(data));
+      });
+  };
 
   const linkClick = () => {
     navigate("/Register");
@@ -52,8 +52,7 @@ export default function Login() {
         <Typography component="h1" variant="h5">
           Log In
         </Typography>
-        <Box component="form" noValidate sx={{ mt: 1 }}>
-          {/* onSubmit={handleSubmit} */}
+        <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
           <TextField
             margin="normal"
             required
@@ -78,7 +77,7 @@ export default function Login() {
             className="textfield"
             onChange={(e) => setPassword(e.target.value)}
           />
-          {/* {validation && <Alert severity="error">{validation.message}</Alert>} */}
+          {validation && <Alert severity="error">{validation.message}</Alert>}
           <Button
             type="submit"
             fullWidth

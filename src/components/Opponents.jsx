@@ -8,7 +8,16 @@ const Opponents = () => {
   const [martialArt, setMartialArt] = useState(null);
 
   useEffect(() => {
-    get("fighters/2").then((fighterData) => {
+    const getRandomId = (min, max) => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    const minId = 1;
+    const maxId = 10;
+
+    const randomId = getRandomId(minId, maxId);
+
+    get(`fighters/${randomId}`).then((fighterData) => {
       setFighter(fighterData);
       if (fighterData && fighterData.images_id) {
         get(`images/${fighterData.images_id}`).then((imageData) => {
@@ -37,7 +46,7 @@ const Opponents = () => {
           <p>Age: {fighter.age}</p>
           <p>Weight: {fighter.weight}</p>
           <p>Height: {fighter.height}</p>
-          <p>Experience: {fighter.experience}</p>
+          <p className="fighterexp">Experience: {fighter.experience}</p>
         </div>
       )}
     </>
