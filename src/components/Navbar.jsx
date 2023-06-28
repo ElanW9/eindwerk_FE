@@ -15,7 +15,7 @@ import LoginBtn from "./LoginBtn";
 import logo from "../assets/logo.png";
 // import AccBtn from "./AccBtn";
 
-const pages = ["Search", "Challenges"];
+const pages = ["Search", "Challenges", "Account"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

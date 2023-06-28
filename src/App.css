@@ -107,3 +107,7 @@ p {
   height: 200px;
   border-radius: 50%;
 }
+
+.fighterexp {
+  font-size: 15px;
+}

@@ -27,7 +27,7 @@ const Fighter = () => {
           <p>Age: {fighter.age}</p>
           <p>Weight: {fighter.weight}</p>
           <p>Height: {fighter.height}</p>
-          <p>Experience: {fighter.experience}</p>
+          <p className="fighterexp">Experience: {fighter.experience}</p>
         </div>
       )}
     </>
