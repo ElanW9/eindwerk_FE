@@ -111,3 +111,20 @@ p {
 .fighterexp {
   font-size: 15px;
 }
+
+.accIMG {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.accName {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.form {
+  padding-right: 20px;
+}

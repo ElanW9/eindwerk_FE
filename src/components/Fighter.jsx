@@ -15,8 +15,7 @@ const Fighter = () => {
         });
       }
     });
-  }, []); // Provide an empty dependency array here
-
+  }, []);
   return (
     <>
       {fighter && (

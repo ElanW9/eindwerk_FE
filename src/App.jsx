@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
 import Challenges from "./pages/Challenges";
+import Account from "./pages/Account";
 
 import "./App.css";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="Register" element={<Register />} />
         <Route path="Search" element={<Search />} />
         <Route path="Challenges" element={<Challenges />} />
+        <Route path="Account" element={<Account />} />
       </Routes>
     </div>
   );

@@ -9,16 +9,15 @@ export default function useFetch() {
   }
 
   useEffect(() => {
-    setLoading(false); // Reset loading state when component unmounts
+    setLoading(false);
     return () => {
-      // Cleanup function to cancel any ongoing requests
       setLoading(true);
     };
   }, []);
 
   function get(url) {
     return new Promise((resolve, reject) => {
-      setLoading(true); // Set loading state to true before making the request
+      setLoading(true);
       myFetch(url)
         .then((response) => response.json())
         .then((data) => {
@@ -53,5 +52,29 @@ export default function useFetch() {
     });
   }
 
-  return { get, post, loading };
+  function put(url, body) {
+    return new Promise((resolve, reject) => {
+      myFetch(url, {
+        method: "put",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      })
+        .then((response) => {
+          if (!response || (response.status >= 400 && response.status <= 500)) {
+            setLoading(false);
+            return reject(response);
+          }
+          setLoading(false);
+          resolve(response);
+        })
+        .catch((error) => {
+          setLoading(false);
+          reject(error);
+        });
+    });
+  }
+
+  return { get, post, put, loading };
 }
